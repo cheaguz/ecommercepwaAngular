@@ -1,0 +1,20 @@
+<div class="card">
+    <mat-card>
+        <form [formGroup]="myForm" (ngSubmit)="login()">
+            <div>
+               <div><mat-label >Usuario</mat-label></div>
+               <mat-icon class="icon">account_circle</mat-icon> <input matInput type="text" formControlName="user" class="input">
+            </div>
+            
+            <div>
+               <div><mat-label >Contraseña</mat-label></div>
+               <mat-icon>vpn_key</mat-icon><input type="password" formControlName="password" class="input">
+            </div>
+            <button mat-raised-button color="warn" id="btnEnviar" type="submit" value="Enviar" [disabled]="myForm.invalid" >Enviar</button>   
+            <span (click)="openDialog()">Olvidaste tu contraseña ?</span>
+        </form>
+        
+    </mat-card>
+</div>
+
+

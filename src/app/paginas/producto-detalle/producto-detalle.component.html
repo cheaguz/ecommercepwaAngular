@@ -1,0 +1,40 @@
+  <button mat-icon-button color="primary"  (click)="back()">
+    <mat-icon>keyboard_backspace</mat-icon>
+    <span>Volver atras </span>
+  </button>
+  <h3>Estas en <span id="disponible">{{producto.category.name}}</span></h3>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <div>
+           <img src="{{producto.image}}" alt="" width="300px" height="300px"> 
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div>
+            <h1>{{producto.name}}</h1>
+            <p id="disponible" *ngIf="producto.quantity>0">En Stock</p>
+            <p color="warn" id="ultimaUnidad" class="parpadea" *ngIf="producto.quantity==1">Ultima unidad!</p>
+            <h2>${{producto.price*cantidad}}</h2>
+            <div>
+                <button *ngIf='isLogin' mat-raised-button color="warn" routerLink="/checkout" (click)="generarCompra(producto._id)">COMPRAR</button>
+                <button *ngIf='!isLogin' mat-raised-button color="warn" (click)="openDialog()" >COMPRAR</button>
+                <input  matInput  type="number" min="1" max="{{producto.quantity}}" id="inputQuantity" placeholder="1" [(ngModel)]="cantidad" >
+                <div *ngIf="cantidad>producto.quantity">la cantidad es mayor a la disponible</div>
+            </div>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+<div>
+    <div>
+        <p>SKU : {{producto.sku}}</p>
+        <h1>Descripcion</h1>
+        <p>{{producto.description}}</p>
+    </div>
+    
+</div>
+
+
+
+
+

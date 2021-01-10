@@ -1,0 +1,45 @@
+ .contenidoPadre{
+   display: inline-block;
+   padding: 1%;
+ }
+ .card{
+  width: 250px;
+  height: 350px;
+ margin: 2%;
+ border: 1px solid #CDCDCD;
+ text-align: center;
+}
+
+   #disponible{
+    color: green;
+   }
+ 
+   #sinStock{
+     color: red;
+   }
+
+   .fontGrande{
+    font-size: 20px;
+  }
+
+  .greyText{
+    color: #5D5D5D;
+  }
+
+  .card:hover{
+    border: 1px solid green;
+  }
+
+  mat-grid-list{
+    margin: 20px;
+  }
+  
+  #filtros{
+    border: 1px solid black;
+  }
+
+  .tags{
+    float: left; 
+    margin-right: 5%;
+  }
+ 

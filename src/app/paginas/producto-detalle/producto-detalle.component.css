@@ -1,0 +1,56 @@
+
+  mat-grid-list{
+    border: 1px solid gray;
+  }
+
+  mat-grid-tile{
+    border: 1px solid gray;
+  }
+
+  mat-grid-list{
+    margin-top: 1rem;
+  }
+
+  #disponible{
+   color: green;
+  }
+
+  #ultimaUnidad{
+    color: red;
+  }
+  .parpadea {
+  
+    animation-name: parpadeo;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 3;
+  }
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+#inputQuantity{
+  width: 50px;
+  height: 30px;
+  margin-left: 1rem;
+}
+

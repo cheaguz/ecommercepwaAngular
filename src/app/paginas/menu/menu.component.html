@@ -1,0 +1,10 @@
+<mat-toolbar class="header" >
+    <div><span routerLink="/">Tecno Zen </span></div> 
+    
+    <div>
+        <span *ngIf="!isLogin" routerLink="/login" >Login</span>
+        <span *ngIf="!isLogin" routerLink="/registro" >Registro</span>
+        <span *ngIf="isLogin" routerLink="/mi-cuenta">Mi cuenta</span>
+        <span *ngIf="isLogin" (click)="logout()" >Salir</span>
+        </div>
+        </mat-toolbar>

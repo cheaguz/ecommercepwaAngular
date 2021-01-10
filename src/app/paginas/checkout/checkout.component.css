@@ -1,0 +1,29 @@
+mat-card{
+    border: 2px solid #6C856C;
+    width: 500px;
+    height: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15%;
+}
+
+
+button{
+    margin: 20px;
+}
+
+mat-radio-button{
+    margin: 10px;
+}
+
+mat-grid-list{
+    
+    box-shadow: 2px solid gray;
+    margin-bottom: 10%;
+    
+}
+
+.center{
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.header{
+    color: white;
+    justify-content: space-between;
+    background-color: #2F352F;
+   
+}
+
+.header span{
+    color: white;
+    padding-right: 1rem;
+    align-items: center;
+}
+.header span:hover{
+    color:#45DA30;
+    border-radius: 10%;
+    transition: 0.5s;
+   
+}
+
+
+
+
+
+
+

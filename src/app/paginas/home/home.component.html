@@ -1,0 +1,76 @@
+
+<mat-sidenav-container>
+    <mat-sidenav mode = "push" [(opened)]="opened"> 
+        <mat-nav-list>
+            <a mat-list-item routerLink="/productos" > Ver todo </a>
+        </mat-nav-list>
+        <mat-nav-list *ngFor ="let categoria of categories">
+          <a mat-list-item routerLink="/producto/categorias/{{categoria['_id']}}" > {{categoria.name}}</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content> 
+        <div id="categoriasBarra">
+            <div id="cat">
+                <button mat-icon-button (click)="opened=!opened" id="btnCategorias"><mat-icon>menu</mat-icon>Categorias</button>
+            </div>
+            <div>
+                <mat-grid-list cols="4" rowHeight="100px">
+                    <mat-grid-tile routerLink="/producto/categorias/{{carrousell[0]._id}}">
+                        <img src="{{carrousell[0].image}}" alt="" class="imageCarrousell">
+                        <div class="txtCarrousell">
+                            <h1>{{carrousell[0].name}}</h1>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile routerLink="/producto/categorias/{{carrousell[1]._id}}">
+                        <img src="{{carrousell[1].image}}" alt="" width="300px" height="300px">
+                        <div class="txtCarrousell">
+                            <h1>{{carrousell[1].name}}</h1>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile routerLink="/producto/categorias/{{carrousell[2]._id}}">
+                        <img src="{{carrousell[2].image}}" alt="" width="300px" height="300px">
+                        <div class="txtCarrousell">
+                            <h1>{{carrousell[2].name}}</h1>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile routerLink="/producto/categorias/{{carrousell[3]._id}}">
+                        <img src="{{carrousell[3].image}}" alt="" width="300px" height="300px">
+                        <div class="txtCarrousell">
+                            <h1>{{carrousell[3].name}}</h1>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <button mat-raised-button class="btn"(click)="prev()" > <mat-icon>keyboard_arrow_left</mat-icon></button>
+                <button mat-raised-button class="btn" id="next" (click)="next()"  > <mat-icon>keyboard_arrow_right</mat-icon></button>
+                <!--ESTOS BOTONES CAMBIAN EL ARRAY-->
+              
+            </div>
+         
+
+            <div class="productos">
+                    <app-productos></app-productos>
+            </div>
+              
+         <mat-divider></mat-divider>
+
+
+
+        </div>     
+        
+      
+</mat-sidenav-content> 
+
+
+
+  
+
+   
+
+
+
+
+
+
+
+

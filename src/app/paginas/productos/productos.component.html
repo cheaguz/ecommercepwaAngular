@@ -1,0 +1,47 @@
+
+    <mat-divider></mat-divider>
+    <div id="search">
+      <form>
+      <input type="search" id="inputSearch" [(ngModel)]="search" name="search">
+      <button mat-button (click)="buscar()"> <mat-icon>search</mat-icon> </button>
+    </form>
+  </div>  
+  <mat-divider></mat-divider>
+
+<mat-grid-list cols="3" >
+   <mat-grid-tile
+       *ngFor="let producto of productos" class="contenidoPadre">
+       <mat-card class="card">
+         <img mat-card-image src="{{producto.image}}" alt="" width="150px" height="150px">
+         <mat-card-title class="greyText">{{producto.name}}</mat-card-title>
+         <mat-card-content>
+               <p class="greyText">SKU: {{producto.sku}}</p>
+               <p *ngIf="producto.quantity>0" id="disponible">En Stock!</p>
+               <p *ngIf="producto.quantity==0" id="sinStock">Fuera de Stock</p>
+               <p class="fontGrande greyText" >$ {{producto.price}}</p>
+         </mat-card-content>
+         <mat-card-actions>
+               <button *ngIf="producto.quantity>0" mat-raised-button color="warn" routerLink="/producto/{{producto._id}}" id="btn">VER DETALLE</button>
+               <button *ngIf="producto.quantity==0" mat-raised-button disabled>VER DETALLE</button>
+         </mat-card-actions>
+      </mat-card>
+   </mat-grid-tile>
+ </mat-grid-list>
+   
+
+    
+   <div id="paginado">
+             <button mat-icon-button color="primary" *ngIf="hasPrevPage" (click)="prev()">
+               <mat-icon>keyboard_arrow_left</mat-icon>
+             </button>
+            <button mat-icon-button color="primary" *ngIf="hasNextPage" (click)="next()">
+               <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+      </div>
+
+
+
+   
+
+ 
+

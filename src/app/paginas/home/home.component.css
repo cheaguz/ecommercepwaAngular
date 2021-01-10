@@ -1,0 +1,91 @@
+
+mat-sidenav-container{
+    height:200%;   
+}
+
+mat-sidenav, mat-sidenav-content{
+    padding: 10px;
+}
+
+mat-nav-list{
+   font-size: 10px;
+}
+
+#categoriasBarra{
+    width: 100%;
+    height: 40px;
+}
+
+#cat{
+   
+    margin-bottom: 5px;
+}
+
+#btnCategorias{
+    font-size: 25px;
+    border: none;
+    background: none;
+    color: gray;
+    appearance: none;
+}
+
+
+
+
+mat-grid-tile {
+    border: 2px solid #f2f2f2;
+    align-items: center;
+    background-color: #EEECEC;
+   
+}
+
+
+
+
+
+
+a:hover{
+    color:#45DA30;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+
+.otroContenido{
+    margin-top: 50%;
+}
+
+
+#next{
+left: 95%;
+}
+
+.btn{
+    margin-top: 10px;
+    position: absolute;
+}
+
+
+
+
+
+.imageCarrousell{
+    height: 200px;
+    width: 300px;
+}
+.txtCarrousell{
+    margin: 0 auto;
+    position: absolute;
+    color: white;
+    display: block;
+   text-align: center;
+   
+}
+
+.txtCarrousell :hover{
+  font-size: 40px;
+  transition: 0.5s;
+  color:#45DA30;
+  opacity: 0.8 ;
+    
+}

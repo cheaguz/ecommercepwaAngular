@@ -1,0 +1,44 @@
+
+<h1>Datos usuario</h1>
+<mat-card>
+<p>Nombre :{{user.name}}  </p>
+<p>Apellido: {{user.lastname}} </p>
+<p>Email : {{user.email}}</p>
+<p>Nombre de usuario :{{user.user}}</p>
+<p>Password :<button mat-button color="warn">Actualizar password</button></p>
+</mat-card>
+
+
+<h1>Mis compras</h1>
+
+  <mat-grid-list cols="5" *ngFor="let compra of compras">
+    <mat-grid-tile> 
+      <mat-grid-tile-header>{{compra.product.name}}</mat-grid-tile-header>
+      <img src="{{compra.product.image}}" alt="" width="130px" height="130px">  
+    </mat-grid-tile>
+    
+    <mat-grid-tile>
+      <mat-grid-tile-header>Precio</mat-grid-tile-header>
+      {{compra.price}}
+    </mat-grid-tile>
+  
+    <mat-grid-tile>
+      <mat-grid-tile-header>Cantidad</mat-grid-tile-header>
+      {{compra.quantity}}
+    </mat-grid-tile>
+  
+    <mat-grid-tile>
+      <mat-grid-tile-header>Total</mat-grid-tile-header>
+      {{compra.total}}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-grid-tile-header>Status</mat-grid-tile-header>
+        {{compra.status}}
+          
+    </mat-grid-tile>
+    
+     
+  </mat-grid-list>
+
+
+

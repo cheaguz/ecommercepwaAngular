@@ -1,0 +1,81 @@
+.contenidoPadre{
+  display: inline-block;
+  padding: 1%;
+ 
+}
+.card{
+ width: 200px;
+ height: 350px;
+border: 1px solid #CDCDCD;
+text-align: center;
+}
+
+  #disponible{
+   color: green;
+  }
+
+  #sinStock{
+    color: red;
+  }
+
+  .fontGrande{
+   font-size: 20px;
+ }
+
+ .greyText{
+   color: #5D5D5D;
+ }
+
+ .card:hover{
+   border: 1px solid green;
+ }
+
+ mat-grid-list{
+  
+   margin-left: 40px;
+ }
+ 
+
+
+
+   #paginado{
+     margin-top: 20px;
+     text-align: center;
+   }
+
+   mat-icon{
+     font-size: 40px;
+    
+   }
+
+
+   mat-divider{
+    margin-top: 2%;
+}
+
+
+.filtros{
+    display: inline-block;
+    position: absolute;
+    margin-left: 0%;
+}
+
+.productos{
+    margin-left: 5%;
+}
+
+.inputPrice{
+    width: 80px;
+    height: 20px;
+}
+
+#search{
+  text-align: center;
+  height: 20px;
+  margin-bottom: 0px;
+}
+
+#inputSearch{
+  width: 50%;
+  height: 30px;
+}

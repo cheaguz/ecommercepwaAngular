@@ -1,0 +1,47 @@
+
+<div>
+  <h1 class="center">Checkout</h1>
+<h3>Descripcion de tu compra</h3>
+
+<mat-grid-list cols="6" >
+  <mat-grid-tile> 
+    <mat-grid-tile-header>{{compra.productoName}}</mat-grid-tile-header>
+    <img src="{{compra.product_image}}" alt="" width="130px" height="130px">  
+  </mat-grid-tile>
+  
+  <mat-grid-tile>
+    <mat-grid-tile-header>Precio Unidad</mat-grid-tile-header>
+    {{compra.priceWeb}}
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-grid-tile-header>Cantidad</mat-grid-tile-header>
+    {{compra.cantidad}}
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-grid-tile-header>Total</mat-grid-tile-header>
+    {{compra.totalWeb}}
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header>Metodo de pago</mat-grid-tile-header>
+    <mat-radio-group
+        [(ngModel)]="pagoSeleccionado">
+        <mat-radio-button color="warn" *ngFor="let pago of formasDepago" [value]="pago" required>
+          {{pago}}
+        </mat-radio-button>
+      </mat-radio-group> 
+        
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-grid-tile-header></mat-grid-tile-header>
+    <button mat-raised-button color="warn" (click)="comprar()">Confirmar</button>
+  </mat-grid-tile>
+   
+</mat-grid-list>
+</div>
+
+
+
+
+
