@@ -35,6 +35,7 @@ import { FiltrosPipe } from './pipes/filtros.pipe';
 import { MiCuentaComponent } from './paginas/mi-cuenta/mi-cuenta.component';
 import { UsuarioNoRegistradoComponent } from "../app/Dialogos/usuario-no-registrado/usuario-no-registrado.component";
 import { ReestablecerPasswordComponent } from "../app/Dialogos/reestablecer-password/reestablecer-password.component";
+import { CambioPasswordComponent } from './Dialogos/cambio-password/cambio-password.component';
 
 
 
@@ -59,6 +60,7 @@ import { ReestablecerPasswordComponent } from "../app/Dialogos/reestablecer-pass
     MiCuentaComponent,
    UsuarioNoRegistradoComponent,
    ReestablecerPasswordComponent,
+   CambioPasswordComponent,
   ],
   imports: [
     BrowserModule,

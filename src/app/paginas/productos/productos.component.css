@@ -70,12 +70,26 @@ text-align: center;
 }
 
 #search{
-  text-align: center;
+  text-align: left;
   height: 20px;
   margin-bottom: 0px;
+ 
 }
 
 #inputSearch{
-  width: 50%;
+  margin-top: 25px;
+  width: 30%;
+  height: 30px;
+}
+
+#filterPrice{
+  text-align: right;
+  margin-bottom: 0px;
+  height: 20px;
+
+}
+
+.inputPrice{
+  width: 15%;
   height: 30px;
 }

@@ -1,12 +1,23 @@
-
-    <mat-divider></mat-divider>
+<br>
+<mat-divider></mat-divider>
     <div id="search">
       <form>
       <input type="search" id="inputSearch" [(ngModel)]="search" name="search">
       <button mat-button (click)="buscar()"> <mat-icon>search</mat-icon> </button>
     </form>
   </div>  
+  
+  <div id="filterPrice">
+    <form action="">
+      <input type="text" placeholder="min" class="inputPrice" [(ngModel)]="min" [ngModelOptions]="{standalone: true}">
+      <input type="text" placeholder="max" class="inputPrice"[(ngModel)]="max" [ngModelOptions]="{standalone: true}">
+      <button mat-button (click)="filterPrice()"><mat-icon>search</mat-icon></button>
+    </form>
+    
+  </div>
   <mat-divider></mat-divider>
+
+
 
 <mat-grid-list cols="3" >
    <mat-grid-tile

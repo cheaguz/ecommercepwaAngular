@@ -34,13 +34,11 @@ msg : "Compra realizada con exito!";
 
 
 
-  
-
     this.usrServ.sale(tiket)
       .subscribe(data=>{
           if(data){
-               this._snackBar.open("Compra realizada con exito!", null, {
-            duration: 5000,
+               this._snackBar.open("Compra realizada con exito!,En la brevedad llegara un mail con los datos de tu compra", null, {
+            duration: 7000,
           });
           }
     },
@@ -49,15 +47,10 @@ msg : "Compra realizada con exito!";
     })
   }
 
+ 
   ngOnInit(): void {
   }
 
 }
 
 
-/*
-this.usrServ.compraUser(this.compra.user_id,tiketUser)
-            .subscribe(response=>{
-              console.log("todo ok" , response)
-            };
-              */

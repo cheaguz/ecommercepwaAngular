@@ -30,5 +30,10 @@ export class ProductosService {
    search(query){
      return this.http.get("http://localhost:3000/products?buscar="+query)
    }
+   filterPrice(min,max){
+    return this.http.get("http://localhost:3000/products?min="+min+"&max="+max)
+  }
  
+  //localhost:3000/products?min=5&max=100
+
 }

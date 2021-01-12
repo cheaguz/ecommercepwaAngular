@@ -28,6 +28,8 @@ nextPage: number;
 page: number;
 prevPage: any;
 pagina;
+min:"";
+max:"";
 
  
 
@@ -93,6 +95,20 @@ pagina;
    });
   }
 
+
+  filterPrice(){
+    this.prdServ.filterPrice(this.min,this.max)
+    .subscribe((data:ProductoPaginator)=>{
+      this.productos = data.docs; 
+      this.hasNextPage=data["hasNextPage"];
+      this.hasPrevPage=data["hasPrevPage"];
+      this.nextPage=data["nextPage"];
+      this.prevPage=data["prevPage"];
+   },
+   err=>{
+     console.log(err)
+   });
+  }
 
  ngOnInit(): void {}
 

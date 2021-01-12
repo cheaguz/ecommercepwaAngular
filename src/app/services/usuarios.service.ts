@@ -48,9 +48,13 @@ authenticationState = new BehaviorSubject((localStorage.getItem("token")?true:fa
    return this.http.get("http://localhost:3000/users/"+id)
  }
 
- compraUser(id,data){
-  return this.http.put("http://localhost:3000/users/compras/"+id,data)
- }
+requestnewPassword (user){
+  return this.http.post("http://localhost:3000/users/generate-password",user)
+}
+
+changePassword(id,password){
+  return this.http.put("http://localhost:3000/users/"+id,password)
+}
 
 
 }

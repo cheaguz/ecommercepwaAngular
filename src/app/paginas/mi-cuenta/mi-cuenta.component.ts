@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { Usuario  } from "src/app/interfaces/usuario"
+import { MatDialog } from '@angular/material/dialog';
+import { CambioPasswordComponent } from 'src/app/Dialogos/cambio-password/cambio-password.component';
 
 
 @Component({
@@ -20,7 +22,7 @@ compras = [];
 
 
 
-  constructor(private usrServ : UsuariosService) { 
+  constructor(private usrServ : UsuariosService, public dialog : MatDialog) { 
     var userId = JSON.parse(localStorage.getItem("user id"));
    
     this.usrServ.getById(userId)
@@ -34,10 +36,10 @@ compras = [];
       console.log(err)
     });
       
-    
+  }
 
-  
-
+  changePassword(){
+    this.dialog.open(CambioPasswordComponent)
   }
 
   ngOnInit(): void {
